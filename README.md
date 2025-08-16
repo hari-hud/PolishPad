@@ -1,4 +1,4 @@
-# Polish Clipboard Tool
+# PolishPad - AI-Powered Text Polisher
 
 A small cross‑platform Python tool that polishes any copied text (simpler, clear, polite).
 Workflow: **Copy → Hotkey → Paste**.
