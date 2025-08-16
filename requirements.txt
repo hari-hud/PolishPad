@@ -1,0 +1,4 @@
+pynput>=1.7.6
+pyperclip>=1.8.2
+openai>=1.30.0
+ollama>=0.2.0

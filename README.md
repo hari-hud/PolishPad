@@ -1,13 +1,31 @@
-# PolishPad
-ClearTone
+# Polish Clipboard Tool
 
+A small cross‑platform Python tool that polishes any copied text (simpler, clear, polite).
+Workflow: **Copy → Hotkey → Paste**.
 
-Polished / Professional vibe
+## Hotkeys
+- **Polish**: `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS)
+- **Next suggestion**: `Ctrl+Shift+]` or `Cmd+Shift+]`
+- **Quit**: `Ctrl+Shift+Q` or `Cmd+Shift+Q`
 
-PolishPad – clipboard + polish
+## Quick start
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 
-Refine – short, sleek
+# Set your provider (OpenAI by default) and API key
+export OPENAI_API_KEY="sk-..."            # Windows PowerShell: setx OPENAI_API_KEY "sk-..."
+export POLISH_PROVIDER="openai"           # or "ollama"
+export POLISH_MODEL="gpt-4o-mini"         # ollama example: "llama3.1:8b"
 
-ClearTone – communicates clarity + politeness
+python polish_clipboard.py
+```
 
-RephraseIt – very literal
+On Linux you may need `xclip` or `xsel` for clipboard:
+```bash
+sudo apt-get install xclip  # or: sudo apt-get install xsel
+```
+
+On macOS, grant **Accessibility** permission to Terminal/iTerm/Python:
+System Settings → Privacy & Security → Accessibility → enable for your terminal app.
